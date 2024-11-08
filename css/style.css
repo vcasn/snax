@@ -1,0 +1,412 @@
+@charset "utf-8";
+/* Code by Vinícius C. */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #f5f6fa;
+}
+.header {
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+	position: fixed;
+	z-index: 1;
+}
+.logo {
+	font-size: 2em;
+	color: rgba(47, 54, 64,1.0);
+	padding: 0.1em;
+	font-family: "raleway";
+	font-weight: 200;
+}
+.menu {
+	height: calc(100vh - 2.7em);
+	width: 220px;
+	background-color: rgba(45, 52, 54,1.0);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	position: fixed;
+	top: 46px;
+	z-index: 1;
+}
+.menu a {
+	background-color: transparent;
+	display: block;
+	padding: 12px;
+	text-decoration: none;
+	color: #f5f6fa;
+	font-family: "exo";
+	font-weight: 200;
+	font-size: 0.9em;
+	transition: all 0.2s ease-in-out;
+	border-radius: 20px;
+}
+.menu a:hover {
+	background-color: rgba(245, 246, 250,0.05);
+}
+.rights {
+	color: #f5f6fa;
+	font-family: "segoe ui light";
+	padding: 10px;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	opacity: 0.4;
+	bottom: 0px;
+	position: absolute;
+}
+li {
+	list-style-type: none;
+	float: left;
+	left: 20%;
+	position: relative;
+	margin-top: -38px;
+	margin-left: 20px;
+}
+li a {
+	display: block;
+	color: rgba(127, 143, 166,0.9);
+	text-align: center;
+	font-size: 0.8em;
+	padding: 11px 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom: 1px solid #4cd137;
+	font-family: "exo";
+	font-weight: 400;
+	transition: all .4s;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+li a:hover {
+	border-bottom: 1px solid rgba(16, 172, 132,1.0);
+	background-color: rgba(220, 221, 225,0.2);
+}
+.perfil {
+	border-radius: 100%;
+	width: 30px;
+	height: 40px;
+	opacity: 0.9;
+	background-color: rgba(99, 110, 114,0.7);
+	border: 3px solid rgba(241, 242, 246,1.0);
+	position: relative;
+	background-image: url(../img/user.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+}
+.perfil:hover {
+	border: 3px solid rgba(241, 242, 246,1.0);
+	background-color: rgba(99, 110, 114,0.7);
+}
+.search {
+	border-radius: 100px;
+	border: 1px solid rgba(245, 246, 250,0.05);
+	font-size: 0.8em;
+	color: rgba(245, 246, 250,0.6);
+	padding: 8px;
+	outline: 0;
+	position: relative;
+	top: 10px;
+	width: 200px;
+	background-color: rgba(220, 221, 225,0.05);
+	font-family: "barlow";
+	font-weight: 300;
+	margin-bottom: 20px;
+	transition: all .5s;
+}
+.search:hover {
+	background-color: rgba(220, 221, 225,0.08);
+}
+.container {
+	width: 790px;
+	left: 50%;
+	margin-left: -570px;
+	position: relative;
+}
+.stories-text {
+	font-family: "barlow";
+	font-weight: 400;
+	font-size: 1.3em;
+	letter-spacing: -1px;
+	left: 18%;
+	top: 50px;
+	color: #2d3436;
+	position: absolute;
+}
+.stories {
+	background-color: transparent;
+	height: 180px;
+	width: 120px;
+	position: relative;
+	float: left;
+	border-radius: 12px;
+	left: 16%;
+	top: 80px;
+	margin-left: 20px;
+	transition: all .5s;
+	cursor: pointer;
+}
+.stories:hover {
+	box-shadow: 0 -20px 15px -10px rgba(209, 216, 224,0.3) inset, 0 20px 15px -10px rgba(209, 216, 224,0.3) inset, 0 0 10px rgba(0, 0, 0, 0.1);
+	transform: scale(1.01);
+}
+.box-post {
+	height: 200px;
+	width: 510px;
+	background-color: #fff;
+	border-radius: 8px;
+	border: 1px solid #eee;
+	position: absolute;
+	top: 280px;
+	left: 147px;
+}
+.box-post-emotes {
+	height: 200px;
+	width: 165px;
+	background-color: #fff;
+	border-radius: 8px;
+	border: 1px solid #eee;
+	position: absolute;
+	top: 280px;
+	left: 665px;
+	font-size: 1.5em;
+	padding: 8px;
+	box-sizing: border-box;
+	overflow: hidden;
+	overflow-y: scroll;
+	color: #2c3e50;
+}
+.post-img {
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	opacity: 0.9;
+	margin: 8px;
+	background-color: rgba(99, 110, 114,0.7);
+	border: 2px solid #55efc4;
+	position: relative;
+	background-image: url(../img/user.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	float: left;
+	cursor: pointer;
+}
+.post-input {
+	height: 100px;
+	width: 400px;
+	position: absolute;
+	margin: 8px;
+	resize: none;
+	border: 1px solid rgba(223, 230, 233,0.4);
+	font-family: "segoe ui light";
+	font-weight: bold;
+	outline: 0;
+	padding: 10px;
+	border-radius: 8px;
+}
+.button-input {
+	outline: 0;
+	padding: 8px;
+	border-radius: 4px;
+	font-family: "exo";
+	font-weight: 400;
+	text-transform: uppercase;
+	border: none;
+	position: relative;
+	top: 73%;
+	cursor: pointer;
+	background-color: rgba(119, 139, 235,0.1);
+	color: #303952;
+	left: 330px;
+	transition: all .5s;
+	border: 1px solid #778beb;
+	opacity: 0.8;
+}
+.button-input:hover {
+	background: transparent;
+	border: 1px solid #778beb;
+}
+.select-input {
+	outline: 0;
+	padding: 5px;
+	border-radius: 4px;
+	font-family: "exo";
+	font-weight: 400;
+	text-transform: uppercase;
+	border: none;
+	position: absolute;
+	top: 74%;
+	cursor: pointer;
+	background-color: rgba(243, 166, 131,0.2);
+	color: rgba(48, 57, 82,1.0);
+	left: 235px;
+	transition: all .5s;
+	border: 1px solid rgba(243, 166, 131,1.0);
+	opacity: 0.8;
+}
+.select-input:hover {
+	background: transparent;
+	border: 1px solid rgba(243, 166, 131,0.4);
+	color: #303952;
+}
+#box-post-emotes::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+#box-post-emotes::-webkit-scrollbar {
+	width: 6px;
+	background-color: #F5F5F5;
+}
+#box-post-emotes::-webkit-scrollbar-thumb {
+	background-color: #000000;
+}
+.posts {
+	width: 685px;
+	background-color: #fff;
+	border-radius: 8px;
+	border: 1px solid #eee;
+	position: relative;
+	top: 300px;
+	left: 147px;
+	margin-bottom: 20px;
+	float: left;
+	float: bottom;
+	padding-bottom: 10px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.post-imgg {
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	opacity: 0.9;
+	margin: 8px;
+	background-color: rgba(99, 110, 114,0.7);
+	border: 2px solid #6a89cc;
+	position: relative;
+	background-image: url(../img/user.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.post-conteudo {
+	width: 685px;
+	height: 365px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	box-shadow: inset -12px -8px 40px rgba(47, 54, 64,0.6);
+	transition: all .4s ease-in-out;
+}
+.post-conteudo:hover {
+	transform: scale(1.03);
+}
+.emotes {
+	transition: .3s all ease-out;
+	cursor: pointer;
+}
+.emotes:hover {
+	transform: scale(1.3);
+	color: #1dd1a1;
+	opacity: 0.7;
+}
+.dados {
+	font-family: "exo";
+	font-weight: 400;
+	font-size: .7em;
+	padding-top: 8px;
+	padding-left: 8px;
+	color: rgba(99, 110, 114,1.0);
+}
+.reactions {
+	border-radius: 2px;
+	border: 1px solid rgba(178, 190, 195,0.4);
+	font-family: "exo";
+	font-weight: 400;
+	font-size: .8em;
+	text-transform: uppercase;
+	padding: 8px;
+	width: 657px;
+	margin-top: 10px;
+	margin-left: 5px;
+	color: rgba(99, 110, 114,1.0);
+}
+.line {
+	width: 100%;
+	background-color: rgba(223, 230, 233,0.7);
+	height: 1px;
+	margin-top: 10px;
+}
+.reactions-hover {
+	transition: all .3s;
+}
+.reactions-hover:hover {
+	color: rgba(162, 155, 254,1.0);
+}
+.edit {
+	right: 6px;
+	cursor: pointer;
+	position: absolute;
+	top: 6px;
+	color: #2d3436;
+	font-size: .9em;
+	transition: all .3s;
+}
+.edit:hover {
+	opacity: 0.6;
+}
+.chat {
+	height: 100vh;
+	width: 240px;
+	right: 0px;
+	z-index: 1;
+	position: fixed;
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+	transition: all .3s;
+}
+.chat:hover {
+	width: 260px;
+}
+.conteudo-direita {
+	width: 100%;
+	position: relative;
+	background-color: rgba(241, 242, 246,0.5);
+	padding: 5px;
+	margin-bottom: 2px;
+	cursor: pointer;
+	transition: all .4s ease-out;
+}
+.conteudo-direita:hover {
+	background-color: rgba(241, 242, 246,1.0);
+}
+.paginas {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid #ff7f50;
+	font-family: 'abel';
+}
+.contatos {
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: 1px solid rgba(87, 96, 111,0.7);
+	font-family: 'abel';
+}
+.control {
+	padding: 5px;
+}
